@@ -1,0 +1,33 @@
+                                           "References for charger project"
+                               kolan manvit ritwik reddy & hari shiva rama krishna.                              
+
+In this project we only took help of AI and youtube:
+1. We took help of youtube in learning how to solder the circuits on perfboard
+2. We took help of google gemini in learning how the the components of the circuit work in completing the mobile charger.
+
+
+   Step-Down Transformer: Lowers mains AC voltage to a safe, low AC voltage (mounted with top terminal contacts).
+
+AC Power Cord & 2-Pin Plug: Connects the transformer’s primary winding to the mains wall socket.
+
+Rectifier Diodes (4x): Standard silicone rectifier diodes (typically 1N400x series) used to build a full-wave bridge rectifier to convert AC to pulsating DC.
+
+Electrolytic Capacitors (3x): Radial-lead smoothing/filter capacitors to filter out AC ripple and stabilize the voltage.
+
+Voltage Regulator IC with Heatsink: A 3-pin linear regulator in a TO-220 package (typically LM7805 or LM7812) fitted with a black aluminum heatsink for thermal dissipation.
+
+USB-A Female Port: Connector to provide a standard 5V output for USB-powered devices or test leads.
+
+Solderless Breadboard: For prototyping the circuit without soldering (has a small component, likely a switch or crystal, resting on top).
+
+
+3. We asked AI about how to test the diodes and LM 7805.
+
+Turn the dial to the Resistance ($\Omega$) mode (or Continuity mode with the speaker/diode symbol).
+Test the key pin combinations using both polarities of the probes (switching red and black)
+Should show a very high resistance or an "OL" (Over Limit / Open) reading.
+
+4. We took help of AI in writing latex document.
+5. We took help of AI in learning about 3d printing.
+6. We learned about the charging protocol from Google.
+7. We took the help of AI in designing the circuit on LTspice.
