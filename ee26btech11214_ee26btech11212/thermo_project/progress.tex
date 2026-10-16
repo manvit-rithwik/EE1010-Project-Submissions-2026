@@ -1,0 +1,177 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{graphicx}      % For adding circuit diagrams or photos
+\usepackage{booktabs}      % For clean component tables
+\usepackage{amsmath}       % For electrical formulas (power, current, voltage)
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    urlcolor=blue
+}
+
+\title{\textbf{Project Progress Report:Device Charger}}
+\author{\textbf{[Kolan Manvit Ritwik \& Hari Shiva Rama Krishna]} \\ Electrical Engineering }
+\date{18/09/2026}
+
+\begin{document}
+
+\maketitle
+
+\section{Project Overview}
+This project aims to design and assemble a custom charger.
+Current progress covers initial topology selection, schematic design,
+and preliminary hardware testing.
+We need to prepare a custom charger with the components provided. The charger should be
+working, the connections should be well organized, and we even need to 3D print the outer body of the
+charger. We need to solder the components carefully so even if we move the circuit 
+a little, the charger shouldn't be damaged. 
+
+\section{Target Specifications}
+
+\begin{itemize}
+    \item \textbf{Input Voltage: 120V AC 50Hz}
+    \item \textbf{Output Voltage: 5V} 
+    \item \textbf{Controller: Linear} 
+    \item \textbf{Target Efficiency: 100\%}
+\end{itemize}
+
+\section{Completed Work}
+\begin{itemize}
+    \item Selected and organized all required components.
+    \item Completed initial circuit schematic design.
+    \item Perfboard assembly for initial proof of concept.
+\end{itemize}
+
+\section{Progress for Project}
+\subsection*{Day 1}
+We started the project today, that is 18/09/2026. We completed learning all required things like what a LM7805 regulator does,
+which also covers revision of concepts which we already know. We learned how to build a circuit on LTspice and built an imaginary 
+circuit. We drew a circuit blueprint on paper and also estimated the voltage vs. time graphs for each of the AC input, transformer, capacitor, and 
+the ends of output. We made a circuit ideology on the perfboard and planned places for each of the components so that it would be easy for 
+us to make 3D printing. We also tested whether the components were working or not. First, we tested the transformer using a voltmeter; it gave
+a reading of around 13.3 to 13.7. Then we tested the capacitor by connecting a 220-ohm resistance in series with the transformer which gives us 12 volts 
+50 Hz, and due to the presence of the 220-ohm resistor, the capacitor remains unharmed. By calculating using AC circuit analysis, we calculated the voltage
+across the capacitor should be around 1.72V; when we checked this value using a multimeter, we got a value of 1.67V, which is close to the calculated
+one, so hence we confirmed that the capacitor was working well. We thought to check whether the LM7805 regulator was working fine, but don't know how to do that,so we passed it.
+ We learned how to do the soldering work from YouTube. Regarding 3D printing, we didn't have any idea about it, so we started learning about software like Tinkercad, FreeCAD,
+OpenSCAD, etc. As this is the first one, we chose the easiest one, OpenSCAD. Hari was taking charge of the 3D printing, though we both will
+learn it, but he will take the major part in doing it. 
+
+\noindent\textbf{End of the day:}
+\begin{enumerate}
+    \item We managed to get an idea about the components.
+    \item We got an idea about how to build a circuit.
+    \item We tested some of the components.
+    \item We made a circuit on LTspice.
+    \item We made a blueprint of the circuit on paper.
+\end{enumerate}
+
+\subsection*{Day 2}
+It is 19/09/2026. We got soldering machines and multimeters to our hostels so that we could work on holidays. We had an ITP exam in the morning which got
+postponed. Then we resumed our project. The connection for the transformer got disconnected, so we soldered it. We struggled at first, then we desoldered
+and again tried to solder it. After a few attempts, we managed to get it right. We also tested each diode using the multimeter as the multimeter was
+set to diode test mode, for which we have to put the dial to resistance and then tap the yellow button until the diode symbol appears on the display.
+Then we have to connect diodes one after another to both ends of the multimeter. The multimeter now generates a small voltage across its terminals,
+so when we connect a diode in forward bias, we get a small voltage of around 0.6V to 0.8V, and when we connect it in reverse bias, it shows OL, meaning open loop,
+which means the circuit is not complete and the diode is perfectly fine. We tested all four diodes, and all were working good. Then we started soldering the components on the perfboard, leaving
+two terminals of the transformer. We soldered the capacitor, diodes, and LM7805 regulator according to the blueprint. We soldered them carefully. Everything was done 
+except for the connection of the USB female port. We got two free terminals for it, and we thought to test the circuit so far. We ensured whether all the connections 
+were correct, and everything was fine, so we put the plug into the socket and started testing the output terminals using a multimeter. Sadly, the capacitor blasted. Then 
+we realized that we hadn't checked whether the capacitor was connected correctly or not. We didn't have a spare capacitor, so we had nothing to do with the circuit. 
+So we decided to work on the LaTeX document and the 3D printing work. We wrote two days of work in LaTeX and learned more things in 3D printing.
+
+\noindent\textbf{End of the day:}
+\begin{enumerate}
+    \item We tested the diodes using the multimeter.
+    \item We've made a huge mistake which stopped us from doing further project work until the lab was open.
+    \item We completed a two-day progress report in LaTeX.
+    \item We got some experience and ease in soldering.
+\end{enumerate}
+
+\subsection*{Day 3}
+It is 20/09/2026. No progress today because we don't have a capacitor. We worked on 3D printing and did some other work.
+
+\subsection*{Day 4}
+It is 21/09/2026. We went to the lab at 9 o'clock and started working. We carefully desoldered the capacitor and replaced it with a new one. This time we were sure about the 
+direction of positive and negative. We soldered the capacitor and again started testing the whole circuit with the two   outputs without connecting a USB. We got the output 
+to be approximately 5V (around 4.995 to 5V); it was constant. We felt happy, but it was only for a short time. The capacitor blasted again. We did everything right about the direction
+of the capacitor; we checked 3--4 times. We even asked AI about the direction, and it showed the same as we know, but yet the capacitor blasted for the second time. Then we Googled
+'why does a capacitor blast even if we give correct directions'. It said this might be because of overheating. Then we realized we've made another mistake: we gave the power supply 
+right after the soldering of the capacitor was finished. This was another big mistake. We took another capacitor and tested it. We had some problem with soldering present on the perfboard, 
+so we desoldered it first using a solder sucker. We then soldered our circuit completely, with the exception of the USB female port, leaving two wires open to fix them later to it. We then tested it using
+the digital multimeter; it gave us 5V. We kept it on for 10 min, and it was working. We had class then, so we had to leave the lab. We left the things there and attended the class. After the class
+was completed, we went back to the lab and soldered everything properly as our solderings were weak. We assigned proper connections to everything, and then we connected the USB female port. We tested it;
+it gave us 5V, so we thought to test it with our phones. Sadly, the wire which connects the transformer to the diodes broke. The soldering was good, though the wire broke. We desoldered that particular 
+spot and then again we soldered it back, but after a few minutes, it broke again in the same way. So we changed the wire completely with a green one. As we were doing it, the issuer present there asked
+us to move because it was already 5:10, so we got back to our hostels. We wrote the LaTeX, worked on 3D printing, etc.
+
+\noindent\textbf{End of the day:}
+\begin{enumerate}
+    \item The circuit was perfectly working.
+    \item The problem again was about the wire; it broke repeatedly.
+    \item Our accuracy in soldering increased.
+\end{enumerate}
+
+
+\subsection*{Day 5}
+It is 22/09/2026. We went to the lab at 3 o'clock and completed all the remaining work on the circuit. We tested the output from the USB port, but it was showing exactly zero. We did it 2 to 3 times, 
+but it was always showing zero. When we tested the same with the output wires, that is from ground and from one end of the regulator, we got 5V again, but from the USB it was zero. We replaced the USB with a new one 
+(desoldered and soldered again). This consumed a lot of time for us, as the USB female port has small terminals, so it wasn't easy for us to solder it. It took much of our time whenever we did that. Finally, 
+everything about the circuit was done. We tested it using a USB 3.0 to C cable connected to a Bluetooth neckband as we were afraid about the phone's health. But the neckband wasn't charging. We got five volts when 
+we tested the USB female port end (power) terminals using the multimeter.we again checked the soldering it was fine so, we tested again for the same neckband then it was charging we then tested for phone it was charging.
+The phone was charging but the charging speed was very low.we then completed the latex till date and did the rest of the  3d printing work. 
+
+\subsection*{Day 6}
+The project deadline was extended till saturday.so we decided to work more on 3d printing, it is the day before the submission we checked the circiut by charging phone once more, it was perfectly working like before.In the evening 
+we checked again using multimeter but it showed us 17V instead of 5V. This must happen because of shorting of regulator,maybe because of internal shorting or external shorting because of solder bridge.We checked for any solder bridging
+but couldn't find any of it.Yet we were afraid of malfunction and then desoldered the LM 7805 and tested it again we didn't know how to test the regulator so we asked AI, we got to know that when we test resistance using multimeter between
+pin 1 and pin 3 we sholdn't get a zero voltage it should be either a high resistance or a over limit on multimeter we got them. the regulator was fine. we then cleaned the board and again soldered carefully and again tested it was 5V again. 
+This was our fault that we didn't solder properly. we managed to do the work on time. we also completed the 3d printing work.
+
+\noindent\textbf{End of the day:}
+\begin{enumerate}
+    \item We got to know that our USB wasn't working, so we replaced it with another one.
+    \item We got to know about how modern devices accept and decline the flow of current into them via chargers.
+    \item We got to know about the charger detection protocol.
+    \item Our charger was ready to use.
+\end{enumerate}
+
+\section{Safety Checks}
+\begin{enumerate}
+    \item We were very alert while doing the project because we were dealing with current, which is high risk.
+    \item We used masks while soldering in the room.
+    \item We left the door and windows open so there was airflow such that the smoke could flow away.
+    \item We made sure that while soldering, it didn't affect nearby places on the perfboard.
+    \item We always checked if there was any overheating in the circuit.  
+\end{enumerate}
+
+\section{References}
+\begin{enumerate}
+    \item In this project, we didn't take much help as we know most of the basics which we need. We took only limited help from Google or AI:
+    \begin{enumerate}
+        \item We took the help of AI in designing the circuit on LTspice.
+        \item We learned soldering from YouTube.
+        \item We learned about the charging protocol from Google.
+        \item We got to know about diode checking on a multimeter from Google.
+        \item Some more small things.
+    \end{enumerate}
+
+\end{enumerate}
+\section{problems faced}
+\begin{enumerate}
+    \item we faced a lot of problems in soldering,as the some of the pins were small it was difficult to solder them.
+    \item the wires were frequently getting broke from the circuit.
+    \item it was the first time for us to know about 3d printing so, it was also a problem.
+\end{enumerate}
+\section{experience}
+\begin{enumerate}
+    At first we thought except for soldering and 3d printing rest all would be easy but as we dive deeper into the concept of "what actually is happening here?" there are more things which we don't know than the things which we know.as the days went we were able to know this things little by little
+    We learned about soldering,3d printing,how to use a multimeter,how to test components such as diodes, regulator,etc.It gave us a hand on experience on making a real circiut on perfboard. It helped us a lot in visualising the circuit before it was mounted.The heat dissipation from the regulator was 
+    very good for watching we put the circuit on for hour and nothing was getting over heated except for the heat sink. At last we were very happy as our project got finished. we are very happy to do this project as it helped in many ways. 
+
+\end{document}

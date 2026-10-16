@@ -1,0 +1,6 @@
+references took in the thermometer project:
+1.we took the help of the pdf in the repo gave to us to get an idea on the project.
+2.we took the help of AI to get some connections right.
+3.we took the help of AI to get the code for the thermometer.
+4.we took the help of AI to complete the latex document.
+5.we took the help of AI to test the components individually.
