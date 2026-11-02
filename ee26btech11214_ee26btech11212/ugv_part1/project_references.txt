@@ -1,0 +1,10 @@
+references took in the UGV project:
+1.we took the help of the repo (voice-ugv) given to us to get an idea on the hardware and components of the project.
+2.we took the help of AI to get the circuit connections right without shorting or damaging the components.
+3.we took the help of AI to understand why the motors were not running without uploading code and how to test them manually.
+4.we took the help of AI to fix the CP2102 driver and COM port write timeout error during flashing.
+5.we took the help of AI to correctly connect the 2S battery and power bank to solve the motor power and brownout issues.
+6.we took the help of AI to update the PWM code to match the newer ESP32 Core 3.x functions.
+7.we took the help of AI to fix the BLE connection and permission issues on the mobile app.
+8.we took the help of AI to calibrate the code so that front, back, left, and right directions work correctly.
+9.we took the help of AI to complete the LaTeX document for this project.
